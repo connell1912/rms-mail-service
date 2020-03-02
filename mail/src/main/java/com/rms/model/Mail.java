@@ -15,10 +15,10 @@ public class Mail {
 	private String to;
 
 	// Replace smtp_username with your Amazon SES SMTP user name.
-	final private String SMTP_USERNAME = "";
+	final private String SMTP_USERNAME = System.getenv("SMTP_USERNAME");
 
 	// Replace smtp_password with your Amazon SES SMTP password.
-	private final String SMTP_PASSWORD = "";
+	private final String SMTP_PASSWORD = System.getenv("SMTP_PASSWORD");
 
 	// The name of the Configuration Set to use for this message.
 	// If you comment out or remove this variable, you will also need to
@@ -36,7 +36,7 @@ public class Mail {
 
 	// The subject line for the email.
 	private final String SUBJECT = "Password Reset";
-	//TODO: fix this
+	
 	// The HTML body for the email.
 	private final String BODY = String.join(System.getProperty("line.separator"), "<h1>Password Reset</h1>",
 			"<p>Reset your password at ",
