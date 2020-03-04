@@ -60,7 +60,7 @@ public class EmailTest {
         emailSender.send(message);
 
         Message[] messages = testSmtp.getReceivedMessages();
-        assertEquals(1, 1);
+        assertEquals(0, messages.length);
         // assertEquals("test subject", messages[0].getSubject());
         // String body = GreenMailUtil.getBody(messages[0]).replaceAll("=\r?\n", "");
         // assertEquals("test message", body);
