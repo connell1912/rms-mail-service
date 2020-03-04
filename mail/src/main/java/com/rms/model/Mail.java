@@ -7,7 +7,7 @@ public class Mail {
 
 	// Replace sender@example.com with your "From" address.
 	// This address must be verified.
-	final private String FROM = "project3.1912@gmail.com";
+	final private String FROM = "roject3.1p912@gmail.com";
 	final private String FROMNAME = "Revature RMS";
 
 	// Replace recipient@example.com with a "To" address. If your account
@@ -15,10 +15,10 @@ public class Mail {
 	private String to;
 
 	// Replace smtp_username with your Amazon SES SMTP user name.
-	final private String SMTP_USERNAME = System.getenv("SMTP_USERNAME");
+	final private String SMTP_USERNAME = "AKIAR5NF4UGVRMYTFHKE";
 
 	// Replace smtp_password with your Amazon SES SMTP password.
-	private final String SMTP_PASSWORD = System.getenv("SMTP_PASSWORD");
+	private final String SMTP_PASSWORD = "BK7fA59x972H7MF2x3ux6n9T0RbZnIrAMvrNYCVT6+Dh";
 
 	// The name of the Configuration Set to use for this message.
 	// If you comment out or remove this variable, you will also need to
