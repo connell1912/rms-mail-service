@@ -32,12 +32,12 @@ public class MailTest {
     
     @Test
     public void testGetSMTP_USERNAME() {
-    	assertEquals(System.getenv("SMTP_USERNAME"), m.getSMTP_USERNAME());
+    	assertEquals(System.getenv("SMTP_USERNAME"), m.getSMTPUSERNAME());
     }
     
     @Test
     public void testGetSMTP_PASSWORD() {
-    	assertEquals(System.getenv("SMTP_PASSWORD"), m.getSMTP_PASSWORD());
+    	assertEquals(System.getenv("SMTP_PASSWORD"), m.getSMTPPASSWORD());
     }
     
     @Test
