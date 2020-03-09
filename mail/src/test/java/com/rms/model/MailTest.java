@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ModelTest {
+public class MailTest {
 
 	
     private Mail m = new Mail();
