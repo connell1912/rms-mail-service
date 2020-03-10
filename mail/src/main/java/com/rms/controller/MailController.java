@@ -32,6 +32,7 @@ public class MailController {
 			ms.sendMail(mail);
 			return "Please Check Your Email";
 		} catch (Exception e) {
+			MailService.LOGGER.error("The Mail was not sent.");
 			MailService.LOGGER.error(e.getMessage());
 		}
 		return "Failed, Please Send Another Request";
