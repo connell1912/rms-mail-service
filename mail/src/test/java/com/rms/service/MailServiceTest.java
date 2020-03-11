@@ -44,7 +44,7 @@ public class MailServiceTest {
     }
 
     @Test
-    public void testEmail() throws InterruptedException, MessagingException {
+    public void testSendMail() throws InterruptedException, MessagingException {
         SimpleMailMessage message = new SimpleMailMessage();
 
         message.setFrom("project3.1912@gmail.com");
