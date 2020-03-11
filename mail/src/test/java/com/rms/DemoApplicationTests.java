@@ -22,7 +22,7 @@ class DemoApplicationTests {
 	void contextLoads() {
 		assertNotNull(new Mail("mareshescoffery@gmail.com"));
 		assertNotNull(m.getBODY());
-		assertNotNull(m.getFROM();
+		assertNotNull(m.getFROM());
 		assertNotNull(m.getFROMNAME());
 		assertNotNull(m.getHOST());
 		assertNotNull(m.getSMTPPASSWORD());
