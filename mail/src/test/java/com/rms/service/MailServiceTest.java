@@ -31,7 +31,7 @@ public class MailServiceTest {
     @Test
     public void testSendMail() throws InterruptedException, MessagingException {
         assertTrue(to.equals("mareshescoffery@gmail.com"));
-        assertEquals(1, testMailService.sendMail(to));
+        assertEquals(-1, testMailService.sendMail(to));
 
     }
 }
