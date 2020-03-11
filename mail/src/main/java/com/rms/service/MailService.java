@@ -11,19 +11,18 @@ import javax.mail.internet.MimeMessage;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.rms.model.Mail;
 
 @Service
 public class MailService {
 
-	@Autowired
-	Mail mail;
+	// @Autowired
+	Mail mail = new Mail();
 
 	public static final Logger LOGGER = LogManager.getLogger();
 
-	public void sendMail(String recieverMail) throws MessagingException, UnsupportedEncodingException {
+	public int sendMail(String recieverMail) throws MessagingException, UnsupportedEncodingException {
 		// Create a Properties object to contain connection configuration information.
 		Properties props = System.getProperties();
 		props.put("mail.transport.protocol", "smtp");
@@ -60,6 +59,6 @@ public class MailService {
 		// Close and terminate the connection.
 		transport.close();
 			
-		 
+		 return 1;
 	}
 }

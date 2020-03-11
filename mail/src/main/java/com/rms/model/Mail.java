@@ -15,10 +15,10 @@ public class Mail {
 	private String to;
 
 	// Replace smtp_username with your Amazon SES SMTP user name.
-	private static final String SMTP_USERNAME = System.getenv("SMTP_USERNAME");
+	private static final String SMTP_USERNAME = "AKIAR5NF4UGVRMYTFHKE";
 
 	// Replace smtp_password with your Amazon SES SMTP password.
-	private static final String SMTP_PASSWORD = System.getenv("SMTP_PASSWORD");
+	private static final String SMTP_PASSWORD = "BK7fA59x972H7MF2x3ux6n9T0RbZnIrAMvrNYCVT6+Dh";
 
 	// Amazon SES SMTP host name. This example uses the US West (Oregon) region.
 	// See
