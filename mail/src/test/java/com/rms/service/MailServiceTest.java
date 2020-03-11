@@ -1,10 +1,6 @@
 package com.rms.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import javax.mail.MessagingException;
-
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -17,7 +13,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 @TestInstance(Lifecycle.PER_CLASS)
 public class MailServiceTest {
 
-    private String to;
 
     @Mock
     private MailService testMailService;
@@ -25,13 +20,12 @@ public class MailServiceTest {
     @BeforeAll
     public void testSmtpInit() {
         testMailService = new MailService();
-        to = "mareshescoffery@gmail.com";
     }
 
     @Test
-    public void testSendMail() throws InterruptedException, MessagingException {
-        assertTrue(to.equals("mareshescoffery@gmail.com"));
-        assertEquals(-1, testMailService.sendMail(to));
+    public void testSendMail() throws Exception {
+        // assertTrue(to.equals("mareshescoffery@gmail.com"));
+        assertEquals(1, testMailService.sendMail("mareshescoffery@gmail.com"));
 
     }
 }
