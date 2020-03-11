@@ -3,7 +3,12 @@ package com.rms;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.io.UnsupportedEncodingException;
+
+import javax.mail.MessagingException;
+
 import com.rms.model.Mail;
+import com.rms.service.MailService;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,18 +17,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 class DemoApplicationTests {
 
 	Mail m = new Mail();
-	
+	MailService ms = new MailService();
 
 	@Test
 	void contextLoads() {
-		assertNotNull(new Mail("mareshescoffery@gmail.com"));
-		assertNotNull(m.getBODY());
-		assertNotNull(m.getFROM());
-		assertNotNull(m.getFROMNAME());
-		assertNotNull(m.getHOST());
-		assertNotNull(m.getSMTPPASSWORD());
-		assertNotNull(m.getSMTPUSERNAME());
-		assertNotNull(m.getSUBJECT());
+
 		assertTrue(587 == m.getPORT());
 
 	}

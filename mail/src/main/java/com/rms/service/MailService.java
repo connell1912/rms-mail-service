@@ -23,8 +23,9 @@ public class MailService {
 
 	public static final Logger LOGGER = LogManager.getLogger();
 
-	public void sendMail(String recieverMail) throws MessagingException, UnsupportedEncodingException {
-		// Create a Properties object to contain connection configuration information.
+	public int sendMail(String recieverMail) {
+		try {
+			// Create a Properties object to contain connection configuration information.
 		Properties props = System.getProperties();
 		props.put("mail.transport.protocol", "smtp");
 		props.put("mail.smtp.port", mail.getPORT());
@@ -59,6 +60,12 @@ public class MailService {
 
 		// Close and terminate the connection.
 		transport.close();
+		return 1;
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage());
+			return -1;
+		}
+		
 			
 		 
 	}
