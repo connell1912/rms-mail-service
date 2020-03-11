@@ -5,18 +5,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.rms.model.Mail;
 
-import org.junit.Before;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class DemoApplicationTests {
 
-	Mail m;
-	@Before
-	void init(){
-		m = new Mail();
-	}
+	Mail m = new Mail();
+	
 
 	@Test
 	void contextLoads() {
