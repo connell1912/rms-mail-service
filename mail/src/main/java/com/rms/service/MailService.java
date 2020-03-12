@@ -17,11 +17,21 @@ import com.rms.model.Mail;
 @Service
 public class MailService {
 
-	// @Autowired
 	Mail mail = new Mail();
 
 	public static final Logger LOGGER = LogManager.getLogger();
 
+	/**
+	*   @author 1912dec16 Java Fullstack Batch 
+	*   
+	*    The sendMail method takes in a string argument. That string argument is for
+	*     the email address that will sent to the requester.
+	*    Once this method is invoked, it sets up the the properties of the configuration 
+	*     to establish an SMTP connection. Then uses the Mail model to set up the messeage 
+	*     to be sent. Afterwhich the SES username and password is given to  send the email
+	*     programmatically. 
+	* 
+	*/
 	public int sendMail(String recieverMail) throws MessagingException, UnsupportedEncodingException {
 		// Create a Properties object to contain connection configuration information.
 		Properties props = System.getProperties();
