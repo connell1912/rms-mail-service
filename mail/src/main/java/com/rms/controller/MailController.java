@@ -17,6 +17,8 @@ public class MailController {
     MailService ms;
     
     /**
+	 * @author 1912dec16 Java Fullstack Batch
+	 *
 	 * sendEmail is the method that will be called that takes in a string.
 	 * It will send a password recovery email to that string.
 	 * The string needs to be checked against the db and confirm that 
